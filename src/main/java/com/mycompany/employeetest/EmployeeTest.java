@@ -18,6 +18,6 @@ public class EmployeeTest {
         employee emp3= new employee("Tom Thumb", "tt@gmail.com");
         employee[] projectGroup = {emp1, emp2, emp3};
         
-        
+        System.out.println("Value of nextEmpNum: " + employee.getNextEmpNum());
     }
 }

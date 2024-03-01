@@ -12,7 +12,7 @@ public class employee {
     private String name;
     private String email;
     private int empNum;
-    private int nextEmpNum=1;
+    private static int nextEmpNum=1;
     
     public employee(){
     this.name="default";
@@ -45,7 +45,7 @@ public class employee {
         else{System.out.println("email length should be more than 3 characters");}
     }
 
-    public int getNextEmpNum() {
+    public static int getNextEmpNum() {
         return nextEmpNum;
     }
     
