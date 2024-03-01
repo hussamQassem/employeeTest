@@ -13,5 +13,11 @@ public class EmployeeTest {
 
     public static void main(String[] args) {
         
+        employee emp1=new employee("Joe Bloggs", "jb@gmail.com");
+        employee emp2= new employee("Ann Banana", "ab@gmail.com");
+        employee emp3= new employee("Tom Thumb", "tt@gmail.com");
+        
+        
+        
     }
 }

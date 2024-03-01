@@ -44,6 +44,10 @@ public class employee {
         this.email = email;}
         else{System.out.println("email length should be more than 3 characters");}
     }
+
+    public int getNextEmpNum() {
+        return nextEmpNum;
+    }
     
     
     
