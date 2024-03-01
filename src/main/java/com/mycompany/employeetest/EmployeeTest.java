@@ -7,11 +7,11 @@ package com.mycompany.employeetest;
 
 /**
  *
- * @author hussa
+ * @author hussam
  */
 public class EmployeeTest {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        
     }
 }
