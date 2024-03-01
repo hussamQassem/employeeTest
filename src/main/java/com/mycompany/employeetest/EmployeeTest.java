@@ -19,5 +19,14 @@ public class EmployeeTest {
         employee[] projectGroup = {emp1, emp2, emp3};
         
         System.out.println("Value of nextEmpNum: " + employee.getNextEmpNum());
+        int m=1;
+        for (employee employee : projectGroup) {
+            if (employee.getEmpNum() > m) {
+                System.out.println(employee.getName());
+            }
+        }
+        
+        
+        
     }
 }
