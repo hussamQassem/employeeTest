@@ -28,7 +28,10 @@ public company(){
  public void addNewStaff(employee employee) {
         staff.add(employee);
     }
-
+    // creating method to get the number of employees currently in the staff ArrayList
+    public int getStaffNumber() {
+        return staff.size();
+    }
 
 
 
