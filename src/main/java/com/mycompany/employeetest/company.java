@@ -20,7 +20,14 @@ public company(){
 
 
 }
-
+    public company(String companyName) {
+        this.companyName = companyName;
+        this.staff = new ArrayList<>();
+    }
+    //creating method that we can add nre employees
+ public void addNewStaff(employee employee) {
+        staff.add(employee);
+    }
 
 
 
