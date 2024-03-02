@@ -12,14 +12,16 @@ package com.mycompany.employeetest;
 public class EmployeeTest {
 
     public static void main(String[] args) {
-        
+        int m=1;
         employee emp1=new employee("Joe Bloggs", "jb@gmail.com");
         employee emp2= new employee("Ann Banana", "ab@gmail.com");
         employee emp3= new employee("Tom Thumb", "tt@gmail.com");
         employee[] projectGroup = {emp1, emp2, emp3};
         
         System.out.println("Value of nextEmpNum: " + employee.getNextEmpNum());
-        int m=1;
+        
+        
+        System.out.println("Employees with Employee Number above " + m );
         for (employee employee : projectGroup) {
             if (employee.getEmpNum() > m) {
                 System.out.println(employee.getName());
