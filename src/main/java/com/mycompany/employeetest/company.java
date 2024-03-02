@@ -4,10 +4,31 @@
  */
 package com.mycompany.employeetest;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author hussa
  */
 public class company {
-    
+    private String companyName;
+    private ArrayList<employee> staff;
+
+public company(){
+        this.companyName = "Default Company";
+        this.staff = new ArrayList<>();
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
 }
