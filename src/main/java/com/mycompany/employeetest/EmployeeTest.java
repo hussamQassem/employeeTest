@@ -15,9 +15,11 @@ public class EmployeeTest {
 
     public static void main(String[] args) {
         int m=2;
+        //3 Employee objects, passing the required details
         Employee emp1=new Employee("Joe Bloggs", "jb@gmail.com");
         Employee emp2= new Employee("Ann Banana", "ab@gmail.com");
         Employee emp3= new Employee("Tom Thumb", "tt@gmail.com");
+     //declares an array to store these 3 Employee objects 
         Employee[] projectGroup = {emp1, emp2, emp3};
         Company co = new Company();
         co.addNewStaff(emp1);
@@ -25,7 +27,8 @@ public class EmployeeTest {
         co.addNewStaff(emp3);
         
         System.out.println("Value of nextEmpNum: " + Employee.getNextEmpNum());
-
+        
+//display the name of each of the employees in the projectGroup array
         System.out.println("Employees with Employee Number above " + m );
         for (Employee employee : projectGroup) {
             if (employee.getEmpNum() > m) {
@@ -41,18 +44,19 @@ public class EmployeeTest {
             System.out.println("enter password");
             String passwordInput=sc.nextLine();
             
+            // checking the login entries and check if matches the saved fields
             if(mg.getUsername().equals(userNameInput)&&mg.getPassword().equals(passwordInput)){
             
                 System.out.println("login successful");
 
-            
+            // creating a console menu system that display the admin options
             while(true){
                 System.out.println("menu\n choose option");
                 System.out.println("1- view current staff");
                 System.out.println("2- add new staff");
                 System.out.println("3- logout");
             int option=sc.nextInt();
-            
+            // checking the manager entries and display options based on admin choies
             switch (option){
             
                 case 1:
@@ -81,11 +85,8 @@ public class EmployeeTest {
             else{
                 System.out.println("something wrong, invaled username or password");
             }
-        
-        
+
         }
-        
-        
-        
+
     }
 }

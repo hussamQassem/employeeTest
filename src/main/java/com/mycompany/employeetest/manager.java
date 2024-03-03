@@ -8,6 +8,7 @@ package com.mycompany.employeetest;
  *
  * @author hussa
  */
+//creating a manager class that extend employee class with username and password as fields
 public class Manager extends Employee{
     
         private String username;
@@ -24,6 +25,7 @@ public class Manager extends Employee{
         this.username = username;
         this.password = password;
     }
+    //setters and getters for all the fields
     public String getUsername() {
         return username;
     }
@@ -39,11 +41,5 @@ public class Manager extends Employee{
     public void setPassword(String password) {
         this.password = password;
     }
-    
 
-    
-    
-    
-    
-    
 }

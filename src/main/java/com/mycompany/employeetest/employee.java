@@ -8,12 +8,13 @@ package com.mycompany.employeetest;
  *
  * @author hussa
  */
+// private Instance fields of the class employee
 public class Employee {
     private String name;
     private String email;
     private int empNum;
     private static int nextEmpNum=1;
-    
+    //constructor that initialises the name and email instance fields 
     public Employee(){
         this.name="default";
         this.email="example@example.com";
@@ -21,13 +22,14 @@ public class Employee {
         Employee.nextEmpNum+=1;
     }
     
+    //constructor initialises these fields with values passed as parameters
     public Employee(String name, String email) {
         this.name = name;
         this.email = email;
         this.empNum = nextEmpNum;
         Employee.nextEmpNum+=1;
     }
-
+// setters and getters for the fileds
     public String getName() {
         return name;
     }

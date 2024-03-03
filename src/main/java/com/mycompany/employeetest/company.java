@@ -11,17 +11,19 @@ import java.util.Iterator;
  *
  * @author hussa
  */
+//creating class stores information about employees that has companey name and staff as fields
 public class Company{
     private String companyName;
     private ArrayList<Employee> staff;
    
-
+//default constructor which initialises all fields.
   public Company(){
     this.companyName = "Default Company";
     this.staff = new ArrayList<>();
 
 
 }
+  //overloaded constructor which accepts a name value as a parameter
   public Company(String companyName) {
     this.companyName = companyName;
     this.staff = new ArrayList<>();
