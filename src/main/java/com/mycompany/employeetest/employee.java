@@ -8,22 +8,24 @@ package com.mycompany.employeetest;
  *
  * @author hussa
  */
-public class employee {
+public class Employee {
     private String name;
     private String email;
     private int empNum;
     private static int nextEmpNum=1;
     
-    public employee(){
+    public Employee(){
         this.name="default";
         this.email="example@example.com";
-        this.empNum=nextEmpNum++;
-   
+        this.empNum=nextEmpNum;
+        Employee.nextEmpNum+=1;
     }
-    public employee(String name, String email) {
+    
+    public Employee(String name, String email) {
         this.name = name;
         this.email = email;
-        this.empNum = nextEmpNum++;
+        this.empNum = nextEmpNum;
+        Employee.nextEmpNum+=1;
     }
 
     public String getName() {
@@ -48,6 +50,9 @@ public class employee {
     public static int getNextEmpNum() {
         return nextEmpNum;
     }
-    
- 
+    //adding tostring method to check the class
+    @Override
+    public String toString() {
+        return "Name: " + this.name + "\nEmail: " + this.email + "\nEmployee Number: " + this.empNum;
+    }
 }

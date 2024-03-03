@@ -8,18 +8,18 @@ package com.mycompany.employeetest;
  *
  * @author hussa
  */
-public class manager extends employee{
+public class Manager extends Employee{
     
         private String username;
         private String password;
     // Constructor with default values
-    public manager() {
+    public Manager() {
       
         this.username = "Gnomeo";
         this.password = "smurf";
     }
     
-    public manager( String username, String password) {
+    public Manager( String username, String password) {
        
         this.username = username;
         this.password = password;

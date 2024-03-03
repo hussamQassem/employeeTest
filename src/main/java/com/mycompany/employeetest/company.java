@@ -11,23 +11,23 @@ import java.util.Iterator;
  *
  * @author hussa
  */
-public class company {
+public class Company{
     private String companyName;
-    private ArrayList<employee> staff;
+    private ArrayList<Employee> staff;
    
 
-  public company(){
+  public Company(){
     this.companyName = "Default Company";
     this.staff = new ArrayList<>();
 
 
 }
-  public company(String companyName) {
+  public Company(String companyName) {
     this.companyName = companyName;
     this.staff = new ArrayList<>();
     }
     //creating method that we can add nre employees
-  public void addNewStaff(employee employee) {
+  public void addNewStaff(Employee employee) {
     staff.add(employee);
     }
     // creating method to get the number of employees currently in the staff ArrayList
@@ -36,15 +36,21 @@ public class company {
     }
 
   public void listEmployees(int empNum) {
+    if (staff.size() <= empNum) {
+        System.out.println("There are no employees with a number higher than: " + empNum);
+        return;
+    }  
+    
     System.out.println("Employees with employee number above " + empNum );
-    Iterator<employee> iter = staff.iterator();
+    Iterator<Employee> iter = staff.subList(empNum, staff.size()).iterator();
         while (iter.hasNext()) {
-            employee emp = iter.next();
-            if (emp.getEmpNum() > empNum) {
-                System.out.println(emp.getName());
-            }
+            Employee emp = iter.next();
+            System.out.println(emp.getName());
         }
     }
 
-
+    @Override
+    public String toString() {
+        return "Company Name: " + this.companyName + "\nList Employees: " + this.staff;
+    }
 }

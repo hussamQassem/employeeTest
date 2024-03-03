@@ -14,24 +14,26 @@ import java.util.Scanner;
 public class EmployeeTest {
 
     public static void main(String[] args) {
-        int m=1;
-        employee emp1=new employee("Joe Bloggs", "jb@gmail.com");
-        employee emp2= new employee("Ann Banana", "ab@gmail.com");
-        employee emp3= new employee("Tom Thumb", "tt@gmail.com");
-        employee[] projectGroup = {emp1, emp2, emp3};
-        company co = new company();
+        int m=2;
+        Employee emp1=new Employee("Joe Bloggs", "jb@gmail.com");
+        Employee emp2= new Employee("Ann Banana", "ab@gmail.com");
+        Employee emp3= new Employee("Tom Thumb", "tt@gmail.com");
+        Employee[] projectGroup = {emp1, emp2, emp3};
+        Company co = new Company();
+        co.addNewStaff(emp1);
+        co.addNewStaff(emp2);
+        co.addNewStaff(emp3);
         
-        
-        System.out.println("Value of nextEmpNum: " + employee.getNextEmpNum());
+        System.out.println("Value of nextEmpNum: " + Employee.getNextEmpNum());
 
         System.out.println("Employees with Employee Number above " + m );
-        for (employee employee : projectGroup) {
+        for (Employee employee : projectGroup) {
             if (employee.getEmpNum() > m) {
                 System.out.println(employee.getName());
             }
         }
 
-        manager mg= new manager("Gnomeo", "smurf");
+        Manager mg= new Manager("Gnomeo", "smurf");
         Scanner sc= new Scanner(System.in);
         while(true){
             System.out.println("please enter username");
@@ -55,14 +57,29 @@ public class EmployeeTest {
             
                 case 1:
                     System.out.println("current staff");
+                    co.listEmployees(m);
+                    break;
                 case 2: 
-                    System.out.println("add staff");
+                  System.out.println("add employee name");
+                  String newEmpName=sc.next();
+                  System.out.println("add employee email");
+                  String newEmpEmail=sc.next();
+                  Employee newEmp= new Employee(newEmpName,newEmpEmail);
+                  co.addNewStaff(newEmp);
+                  System.out.println("new employee added");
+                  break;
                 case 3:
                     System.out.println("exit");
+                    break;
+                default :
+                    System.out.println("please enter valed option");
 
             }//end of switch
 
             } //end of while
+            }
+            else{
+                System.out.println("something wrong, invaled username or password");
             }
         
         
