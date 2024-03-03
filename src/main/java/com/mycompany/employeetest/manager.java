@@ -10,8 +10,8 @@ package com.mycompany.employeetest;
  */
 public class manager extends employee{
     
-    private String username;
-    private String password;
+        private String username;
+        private String password;
     // Constructor with default values
     public manager() {
       

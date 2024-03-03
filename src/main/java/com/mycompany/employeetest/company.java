@@ -16,28 +16,28 @@ public class company {
     private ArrayList<employee> staff;
    
 
-public company(){
-        this.companyName = "Default Company";
-        this.staff = new ArrayList<>();
+  public company(){
+    this.companyName = "Default Company";
+    this.staff = new ArrayList<>();
 
 
 }
-    public company(String companyName) {
-        this.companyName = companyName;
-        this.staff = new ArrayList<>();
+  public company(String companyName) {
+    this.companyName = companyName;
+    this.staff = new ArrayList<>();
     }
     //creating method that we can add nre employees
- public void addNewStaff(employee employee) {
-        staff.add(employee);
+  public void addNewStaff(employee employee) {
+    staff.add(employee);
     }
     // creating method to get the number of employees currently in the staff ArrayList
-    public int getStaffNumber() {
-        return staff.size();
+  public int getStaffNumber() {
+    return staff.size();
     }
 
- public void listEmployees(int empNum) {
-        System.out.println("Employees with employee number above " + empNum );
-        Iterator<employee> iter = staff.iterator();
+  public void listEmployees(int empNum) {
+    System.out.println("Employees with employee number above " + empNum );
+    Iterator<employee> iter = staff.iterator();
         while (iter.hasNext()) {
             employee emp = iter.next();
             if (emp.getEmpNum() > empNum) {
@@ -45,11 +45,6 @@ public company(){
             }
         }
     }
-
-
-
-
-
 
 
 }

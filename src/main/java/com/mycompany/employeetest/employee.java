@@ -15,9 +15,9 @@ public class employee {
     private static int nextEmpNum=1;
     
     public employee(){
-    this.name="default";
-    this.email="example@example.com";
-    this.empNum=nextEmpNum++;
+        this.name="default";
+        this.email="example@example.com";
+        this.empNum=nextEmpNum++;
    
     }
     public employee(String name, String email) {
@@ -49,7 +49,5 @@ public class employee {
         return nextEmpNum;
     }
     
-    
-    
-    
+ 
 }
