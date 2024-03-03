@@ -17,6 +17,8 @@ public class EmployeeTest {
         employee emp2= new employee("Ann Banana", "ab@gmail.com");
         employee emp3= new employee("Tom Thumb", "tt@gmail.com");
         employee[] projectGroup = {emp1, emp2, emp3};
+        company co = new company();
+        
         
         System.out.println("Value of nextEmpNum: " + employee.getNextEmpNum());
         
